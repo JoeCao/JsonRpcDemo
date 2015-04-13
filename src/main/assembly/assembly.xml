@@ -27,7 +27,7 @@
             <directoryMode>0755</directoryMode>
 		</fileSet>
 		<fileSet>
-			<directory>${project.build.directory}/classes</directory>
+            <directory>src/main/assembly/conf</directory>
             <includes>
                 <include>dubbo.properties</include>
                 <include>log4j.*</include>

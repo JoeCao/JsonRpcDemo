@@ -28,6 +28,6 @@
 
 
 
-   <dubbo:protocol id="dubbo" name="dubbo" port="10880" />
-   <dubbo:protocol id="jsonrpc" name="jsonrpc" port="38080" />
+   <dubbo:protocol id="dubbo" name="dubbo" port="10881" />
+   <dubbo:protocol id="jsonrpc" name="jsonrpc" port="38081" />
 </beans>
