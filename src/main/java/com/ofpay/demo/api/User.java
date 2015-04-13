@@ -20,6 +20,17 @@ public class User {
     public User() {
     }
 
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("User{");
+        sb.append("id='").append(id).append('\'');
+        sb.append(", name='").append(name).append('\'');
+        sb.append(", age=").append(age);
+        sb.append(", time=").append(time);
+        sb.append(", sex=").append(sex);
+        sb.append('}');
+        return sb.toString();
+    }
 
     public User(String id, String name, int age) {
         this.id = id;
