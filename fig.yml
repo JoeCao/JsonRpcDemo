@@ -1,0 +1,15 @@
+zookeeper:
+  image: jplock/zookeeper
+  hostname: zookeeper
+  ports:
+   - "2181:2181"
+
+dubboserver:
+  image: joecao/dubbojsonrpc
+  links:
+   - zookeeper
+  hostname: dubboserver
+  ports:
+   - "10881:10881"
+   - "38081:38081"
+
