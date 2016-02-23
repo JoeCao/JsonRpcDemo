@@ -23,6 +23,12 @@ public class UserProviderAnotherImpl implements UserProvider {
         return new User(userId, "Joe", 48);
     }
 
+    @Override
+    public User getUser(int userCode) {
+        logger.info("input userCode = " + userCode);
+        return new User(String.valueOf(userCode), "userCode get", 48);
+    }
+
     public User queryUser(User user) {
         logger.info("input user = " + user);
         return new User(user.getId(), "get:" + user.getName(), user.getAge() + 18);

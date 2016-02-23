@@ -9,7 +9,9 @@ public interface UserProvider {
 
     boolean isLimit(Gender gender, String name);
 
-    User  getUser(String userId);
+    User getUser(String userId);
+
+    User getUser(int usercode);
 
     User queryUser(User user);
 

@@ -27,4 +27,9 @@ public class UserProviderImpl implements UserProvider {
 
         return map;
     }
+
+    @Override
+    public User getUser(int userCode) {
+        return new User(String.valueOf(userCode), "userCode get", 48);
+    }
 }
