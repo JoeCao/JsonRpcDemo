@@ -14,7 +14,8 @@ public class Client {
             ApplicationConfig applicationConfig = new ApplicationConfig();
             applicationConfig.setName("testApp");
             RegistryConfig registry = new RegistryConfig();
-            registry.setAddress("224.5.6.7:1234");
+//            registry.setAddress("224.5.6.7:1234");
+            registry.setAddress("192.168.59.103:2181");
             ReferenceConfig<UserProvider> reference = new ReferenceConfig<UserProvider>();
             reference.setApplication(applicationConfig);
             reference.setRegistry(registry);

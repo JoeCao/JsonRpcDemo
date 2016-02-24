@@ -13,3 +13,9 @@ dubboserver:
    - "10881:10881"
    - "38081:38081"
 
+pythonclient:
+  image: joecao/dubbo_client_py
+  links:
+   - zookeeper
+   - dubboserver
+
