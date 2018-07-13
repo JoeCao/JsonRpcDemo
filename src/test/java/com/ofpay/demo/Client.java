@@ -3,7 +3,7 @@ package com.ofpay.demo;
 import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ReferenceConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
-import com.ofpay.demo.api.UserProvider;
+import com.qianmi.demo.api.UserProvider;
 
 /**
  * Created by caozupeng on 15-4-16.

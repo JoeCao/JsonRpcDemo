@@ -1,4 +1,6 @@
-package com.ofpay.demo.api;
+package com.qianmi.demo.api;
+
+import com.alibaba.dubbo.config.annotation.Service;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,6 +8,7 @@ import java.util.Map;
 /**
  * Created by wuwen on 15/4/7.
  */
+@Service(protocol = {"jsonrpc"}, version = "1.0")
 public class UserProviderImpl implements UserProvider {
     @Override
     public boolean isLimit(Gender gender, String name) {

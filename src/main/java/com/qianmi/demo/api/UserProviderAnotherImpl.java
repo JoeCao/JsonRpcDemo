@@ -1,4 +1,4 @@
-package com.ofpay.demo.api;
+package com.qianmi.demo.api;
 
 import com.alibaba.dubbo.rpc.RpcContext;
 import org.slf4j.Logger;

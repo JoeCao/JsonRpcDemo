@@ -1,4 +1,4 @@
-package com.ofpay.demo.api;
+package com.qianmi.demo.api;
 
 /**
  * Created by caozupeng on 16/2/25.
