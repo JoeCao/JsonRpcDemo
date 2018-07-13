@@ -16,4 +16,6 @@ public interface UserProvider {
     User queryUser(User user);
 
     Map<String, User> queryAll();
+
+    void gotException() throws ServerException;
 }
