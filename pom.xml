@@ -21,7 +21,7 @@
         <logstash-logback-encoder.version>4.4</logstash-logback-encoder.version>
         <hikaricp.version>2.4.1</hikaricp.version>
         <qm.micro.service.version>1.2.9-RELEASE</qm.micro.service.version>
-        <dubbo.version>2.4.13</dubbo.version>
+        <dubbo.version>2.4.10</dubbo.version>
         <docker.image.prefix>club.newtech</docker.image.prefix>
 
     </properties>
@@ -45,6 +45,7 @@
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.12</version>
                 <executions>
                     <execution>
                         <id>build-image</id>
