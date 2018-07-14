@@ -1,17 +1,15 @@
-package com.qianmi.demo.api;
+package club.newtech.demo.api;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.qianmi.demo"})
 public class DemoApplication {
     private static final Logger log = LoggerFactory.getLogger(DemoApplication.class);
 

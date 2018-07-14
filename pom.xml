@@ -5,14 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-
     <parent>
-        <groupId>com.qianmi</groupId>
-        <artifactId>parent</artifactId>
-        <version>1.4.4-RELEASE</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.13.RELEASE</version>
     </parent>
 
-    <artifactId>JsonRpcDemo</artifactId>
+    <groupId>club.newtech</groupId>
+    <artifactId>dubbo-jsonrpc-demo</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>
@@ -20,8 +20,10 @@
         <project.build.sourceencoding>utf-8</project.build.sourceencoding>
         <logstash-logback-encoder.version>4.4</logstash-logback-encoder.version>
         <hikaricp.version>2.4.1</hikaricp.version>
-        <qm.micro.service.version>1.0.20-RELEASE</qm.micro.service.version>
+        <qm.micro.service.version>1.2.9-RELEASE</qm.micro.service.version>
         <dubbo.version>2.4.13</dubbo.version>
+        <docker.image.prefix>club.newtech</docker.image.prefix>
+
     </properties>
 
     <build>
@@ -37,17 +39,25 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.qianmi.demo.api.DemoApplication</mainClass>
+                    <mainClass>club.newtech.demo.api.DemoApplication</mainClass>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
-                <version>0.4.13</version>
+                <executions>
+                    <execution>
+                        <id>build-image</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
-                    <imageName>qianmi/${project.artifactId}:${project.version}</imageName>
+                    <imageName>${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
                     <baseImage>java</baseImage>
-                    <entryPoint>["java", "-jar", "/${project.build.finalName}.jar", "--spring.profiles.active=docker"]</entryPoint>
+                    <entryPoint>["java", "-jar", "/${project.build.finalName}.jar", "--spring.profiles.active=docker"]]</entryPoint>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
@@ -69,10 +79,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>com.qianmi</groupId>
             <artifactId>micro-service</artifactId>

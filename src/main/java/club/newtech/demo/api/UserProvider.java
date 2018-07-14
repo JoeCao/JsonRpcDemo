@@ -1,4 +1,4 @@
-package com.qianmi.demo.api;
+package club.newtech.demo.api;
 
 import java.util.Map;
 

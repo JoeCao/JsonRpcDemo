@@ -1,4 +1,4 @@
-package com.qianmi.demo.api;
+package club.newtech.demo.api;
 
 import com.alibaba.dubbo.rpc.RpcContext;
 import org.slf4j.Logger;

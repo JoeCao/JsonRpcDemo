@@ -1,4 +1,4 @@
-package com.qianmi.demo.api;
+package club.newtech.demo.api;
 
 /**
  * Created by wuwen on 15/4/7.
