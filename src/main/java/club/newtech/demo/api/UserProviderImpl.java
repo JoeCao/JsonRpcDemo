@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * Created by wuwen on 15/4/7.
  */
-@Service(protocol = {"jsonrpc"}, version = "1.0")
+@Service(protocol = {"dubbo", "jsonrpc"}, version = "1.0", interfaceClass = UserProvider.class)
 public class UserProviderImpl implements UserProvider {
     @Override
     public boolean isLimit(Gender gender, String name) {
