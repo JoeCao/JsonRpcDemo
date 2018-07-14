@@ -1,4 +1,4 @@
-package com.ofpay.demo;
+package club.newtech.demo;
 
 /**
  * Created by wuwen on 15/4/7.

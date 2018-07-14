@@ -1,4 +1,4 @@
-package com.ofpay.demo;
+package club.newtech.demo;
 
 import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ReferenceConfig;
@@ -15,13 +15,13 @@ public class Client {
             applicationConfig.setName("testApp");
             RegistryConfig registry = new RegistryConfig();
 //            registry.setAddress("224.5.6.7:1234");
-            registry.setAddress("192.168.59.103:2181");
+            registry.setAddress("172.19.72.14:2181,172.19.65.33:2181,172.19.65.128:2181");
             ReferenceConfig<UserProvider> reference = new ReferenceConfig<UserProvider>();
             reference.setApplication(applicationConfig);
             reference.setRegistry(registry);
             reference.setCheck(true);
             reference.setInterface(UserProvider.class);
-            reference.setVersion("2.0");
+            reference.setVersion("1.0");
             UserProvider userProvider = reference.get();
             for (int i = 0; i < 1000; i++) {
                 try {

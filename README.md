@@ -1,18 +1,15 @@
 # JsonRpcDemo
-Dubbo JsonRpc protocol demo server-side
-使用dubbo自带容器启动，不需要Tomcat
+Dubbo JsonRpc protocol demo server-side  
+使用spring boot启动
 
 ### 使用
+启动docker进程
 ```shell
 git clone https://github.com/JoeCao/JsonRpcDemo.git
 cd JsonRpcDemo
 mvn clean install
-cd target
-tar -xvf JsonRpcDemo-1.0-SNAPSHOT-assembly.tar.gz
-cd JsonRpcDemo-1.0-SNAPSHOT-assembly
-cd bin
-sh start.sh
+docker-compose up
 ```
 
 ### 调试
-使用com.ofpay.demo.Demo作为入口
+使用club.newtech.demo.api.DemoApplication作为入口

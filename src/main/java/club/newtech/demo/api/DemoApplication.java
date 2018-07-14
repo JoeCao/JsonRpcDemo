@@ -21,7 +21,7 @@ public class DemoApplication {
                 "Access URLs:\n----------------------------------------------------------\n\t"
                         + "Local:      http://127.0.0.1:{}\n\t"
                         + "External:   http://{}:{}\n----------------------------------------------------------",
-                port, port, InetAddress.getLocalHost().getHostAddress(), port
+                port, InetAddress.getLocalHost().getHostAddress(), port
         );
 
     }
