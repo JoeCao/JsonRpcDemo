@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by wuwen on 15/4/7.
  */
-public class User {
+public class User implements java.io.Serializable {
 
     private String id;
 

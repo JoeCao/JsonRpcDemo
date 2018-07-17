@@ -1,5 +1,6 @@
 package club.newtech.demo.api;
 
+import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -10,6 +11,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 @SpringBootApplication
+@EnableDubboConfiguration
 public class DemoApplication {
     private static final Logger log = LoggerFactory.getLogger(DemoApplication.class);
 
