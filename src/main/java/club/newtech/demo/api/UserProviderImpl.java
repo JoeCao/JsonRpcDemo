@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * Created by wuwen on 15/4/7.
  */
-@Service(version = "1.0", interfaceClass = UserProvider.class)
+@Service(protocol = {"dubbo", "jsonrpc"}, version = "1.0", interfaceClass = UserProvider.class)
 @Component
 public class UserProviderImpl implements UserProvider {
     @Override
